@@ -140,7 +140,7 @@ class  VmaigPasswordRestForm(forms.Form):
         try:
             send_mail(title, message, from_email, [self.user.email])
         except Exception as e:
-            logger.error(u'[UserControl]用户重置密码邮件发送失败:[%s]/[%s]' % (username,email))
+            logger.error(u'[UserControl]用户重置密码邮件发送失败:[%s]/[%s]/[from mail:%s]' % (username,email, from_email))
 
                     
 
