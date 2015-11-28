@@ -78,6 +78,8 @@ class ArticleView(BaseMixin,DetailView):
         self.cur_user_ip = ip
 
         en_title = self.kwargs.get('slug')
+        new_en_tital = en_title.replace(" ", "_")
+        self.kwargs['slug'] = new_en_tital
         #获取15*60s时间内访问过这篇文章的所有ip
         visited_ips = cache.get(en_title,[])
         
