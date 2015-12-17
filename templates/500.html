@@ -1,0 +1,23 @@
+{% extends "admin/base_404_500.html" %}
+
+{% block title %}500 error found! -- pymatrix.com{% endblock %}
+{% block css %}
+<style type="text/css">
+.mar{margin-right:100px;}
+.line{border-bottom:1px solid #BFBFBE; width: 197px;margin-bottom:15px;}
+.tip{margin-bottom:15px;}
+.comeback{width:197px;}
+</style>
+{% endblock %}
+
+{% block base_col1_noborder %}
+<div class="blank40"></div>
+<div style="height:300px; width:470px;margin-top:100px;" class="m_tc">
+    <img class="photo_png fl mar" src="http://static.codoon.com/image/error/500.png" />
+    <div class="co4 f12 tip">F5刷新试试，服务器可能病了，内部错误。</div>
+    <div class="line fl"></div>
+    <p class="co1 f12 comeback fr">您不返回吗？<br />您真的不返回了吗？<br />您确定现在不返回吗？<br />好吧，随便你返不返回！</p>
+</div>
+{% endblock %}
+
+

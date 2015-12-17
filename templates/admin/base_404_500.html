@@ -1,0 +1,61 @@
+{% load i18n %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="{{ LANGUAGE_CODE|default:"en-us" }}" 
+      xml:lang="{{ LANGUAGE_CODE|default:"en-us" }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}><head>
+		<title>{% block title %}{% endblock %} {% trans 'pymatrix！' %}</title>
+{#		<link rel="shortcut icon" href="http://static.codoon.com/image/universal/codoon.ico" />#}
+{#		<link rel="stylesheet" type="text/css" href="http://static.codoon.com/css/base.css" />#}
+{#		<link rel="stylesheet" type="text/css" href="http://static.codoon.com/css/codoon.css" />#}
+		<meta name ="keywords" http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<style type="text/css">
+			.content_bottom{display: none;}
+			.base_col1_noborder{_height: 500px;min-height: 500px;}
+		</style>
+		{% block css %}{% endblock %}
+	</head>
+	
+    <style type="text/css">
+	   .home_header_content{position:relative;}
+	    .home_header_content .indexbate{width: 28px; height:15px; background-position:-66px -346px; position:absolute;left:140px; top:7px;}
+        .home_header_content .indexinfo{width:139px;height:19px;background-position:-7px -117px;position:absolute;left:140px;top:30px;}
+	</style>
+	<body>
+		<div id="codoonwrap">
+		<div class="home_headerColor" style="height:80px">
+			<div class="home_header" style="height:75px">
+				<div class="home_header_content tc">
+					<a href="/home" class="newpic photo_png home_logo fl"></a>
+					<div class="img photo_png indexbate">
+                    </div>
+                    <div class="img photo_png indexinfo">
+                    </div>
+				</div>
+			</div>
+		</div>
+		<div class="base_col1_noborder content" style="background:none;">
+		{% block base_col1_noborder %}
+		  
+		{% endblock %}
+		</div>
+		<div class="blank0"></div>
+		<div class="tl">
+			<div style="position:relative;margin: 0 auto;width:980px;z-index: 50;">
+				<div class="content_bottom"></div>
+			</div>
+			<div class="footer">
+				<div class="footer-line"></div>
+				<div class="footersize tc">
+					<div class="footerlogin" style="margin-top:35px;">
+                        <div class="fr">
+                            {% include "includes/_footer_loginurl.html" %}
+                            <div class="img photo_png footerlogo fr"></div>
+                            <div class="co1 footerinfo tr fr f12">{% trans 'pymatrix！' %}<br />Copyright © 2010-2014 Codoon&nbsp;&nbsp;&nbsp;&nbsp;蜀ICP备12014086号</div>
+                        </div>
+                        <div class="blank0"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	</body>
+</html>
